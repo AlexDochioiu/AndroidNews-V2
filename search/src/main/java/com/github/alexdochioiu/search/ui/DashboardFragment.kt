@@ -1,4 +1,4 @@
-package com.github.alexdochioiu.androidnewsv2.ui.dashboard
+package com.github.alexdochioiu.search.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.github.alexdochioiu.androidnewsv2.R
+import com.github.alexdochioiu.search.R
 
 class DashboardFragment : Fragment() {
 

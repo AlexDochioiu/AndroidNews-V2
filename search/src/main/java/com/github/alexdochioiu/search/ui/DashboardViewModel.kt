@@ -1,4 +1,4 @@
-package com.github.alexdochioiu.androidnewsv2.ui.dashboard
+package com.github.alexdochioiu.search.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
