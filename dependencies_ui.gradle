@@ -1,0 +1,13 @@
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "com.google.android.material:material:$material"
+
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout"
+
+    implementation "androidx.navigation:navigation-fragment:$navigation_ktx"
+    implementation "androidx.navigation:navigation-ui:$navigation_ktx"
+
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_ktx"
+}
