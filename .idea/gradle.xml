@@ -10,11 +10,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core-networking" />
-            <option value="$PROJECT_DIR$/core-persistence" />
+            <option value="$PROJECT_DIR$/core_networking" />
+            <option value="$PROJECT_DIR$/core_persistence" />
             <option value="$PROJECT_DIR$/search" />
-            <option value="$PROJECT_DIR$/search-networking" />
-            <option value="$PROJECT_DIR$/search-persistence" />
+            <option value="$PROJECT_DIR$/search_networking" />
+            <option value="$PROJECT_DIR$/search_persistence" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

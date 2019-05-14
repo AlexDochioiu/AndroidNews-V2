@@ -1,9 +1,9 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.dynamic-feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply from: '../compile_options.gradle'
-apply from: '../dependencies_core.gradle'
+apply from: '../dagger.gradle'
 
 android {
     compileSdkVersion 28
@@ -18,20 +18,6 @@ android {
         consumerProguardFiles 'consumer-rules.pro'
     }
 
-    buildTypes {
-        debug {
-
-        }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    configurations {
-        debug
-        release
-    }
 
 }
 
@@ -39,5 +25,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':app')
-    //implementation project(path:':app', configuration:'default')
+    implementation project(':core_networking')
 }

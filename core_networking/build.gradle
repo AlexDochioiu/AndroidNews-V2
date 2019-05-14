@@ -1,15 +1,12 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.dynamic-feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 apply from: '../compile_options.gradle'
 apply from: '../dagger.gradle'
-apply from: '../dependencies_core.gradle'
 
 android {
     compileSdkVersion 28
-
 
     defaultConfig {
         minSdkVersion 24
@@ -20,18 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
-
-    buildTypes {
-        debug {
-
-        }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':app')
 }
