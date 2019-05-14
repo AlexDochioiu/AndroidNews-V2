@@ -68,11 +68,7 @@ ext {
 
     ui = [
             lifecycle_extension: "androidx.lifecycle:lifecycle-extensions:$lifecycle_extension",
-            material: "com.google.android.material:material:$material",
-            navigation : [ //this is non-ktx
-                           fragment : "androidx.navigation:navigation-fragment:$navigation",
-                           ui : "androidx.navigation:navigation-ui:$navigation"
-            ],
+            material: "com.google.android.material:material:$material", //done
             recyclerview: "androidx.recyclerview:recyclerview:$recyclerview",
             cardview: "androidx.cardview:cardview:$cardview",
             circleimageview: "de.hdodenhof:circleimageview:$circleimageview"
