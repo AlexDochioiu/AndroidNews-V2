@@ -33,9 +33,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines"
+
     api "com.squareup.okhttp3:okhttp:$okhttp"
     api "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_interceptor"
     api "com.squareup.retrofit2:retrofit:${retrofit.retrofit}"
+
+    api "com.squareup.moshi:moshi:${moshi}"
+    api "com.squareup.retrofit2:converter-moshi:${retrofit.moshi_adapter}"
+    api "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${retrofit.coroutines_adapter}"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
