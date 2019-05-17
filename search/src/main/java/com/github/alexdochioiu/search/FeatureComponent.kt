@@ -1,8 +1,10 @@
 package com.github.alexdochioiu.search
 
+import com.github.alexdochioiu.androidnewsv2.appComponent
 import com.github.alexdochioiu.androidnewsv2.di.Feature_UiScope
 import com.github.alexdochioiu.androidnewsv2.di.InjectableComponent
 import com.github.alexdochioiu.search.ui.DashboardFragment
+import com.github.alexdochioiu.search_networking.di.DaggerSearchNetworkComponent
 import com.github.alexdochioiu.search_networking.di.SearchNetworkComponent
 import dagger.Component
 
@@ -14,7 +16,4 @@ import dagger.Component
 interface FeatureComponent : InjectableComponent<DashboardFragment> {
 }
 
-/*
-fun FeatureComponent.inject() {
-    DaggerFeatureComponent
-}*/
+

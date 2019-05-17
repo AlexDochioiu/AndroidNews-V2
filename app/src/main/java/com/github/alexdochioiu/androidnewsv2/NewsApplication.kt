@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.BuildCompat
+import androidx.fragment.app.FragmentActivity
 import com.github.alexdochioiu.androidnewsv2.NewsApplication.Companion.appComponent
 import com.github.alexdochioiu.androidnewsv2.di.AppComponent
 import com.github.alexdochioiu.androidnewsv2.di.DaggerAppComponent
@@ -34,3 +35,5 @@ class NewsApplication : Application() {
     }
 }
 fun Activity.appComponent() = appComponent(this)
+
+fun FragmentActivity.appComponent() = appComponent(this)
