@@ -1,10 +1,9 @@
 apply plugin: 'com.android.dynamic-feature'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 apply from: '../compile_options.gradle'
 apply from: '../dagger.gradle'
-apply from: '../dependencies_ui.gradle'
 
 android {
     compileSdkVersion 28
@@ -14,15 +13,15 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':app')
-    implementation project(':search_networking')
-}
-repositories {
-    mavenCentral()
 }

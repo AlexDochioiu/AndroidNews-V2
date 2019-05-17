@@ -8,8 +8,6 @@ import androidx.core.os.BuildCompat
 import com.github.alexdochioiu.androidnewsv2.NewsApplication.Companion.appComponent
 import com.github.alexdochioiu.androidnewsv2.di.AppComponent
 import com.github.alexdochioiu.androidnewsv2.di.DaggerAppComponent
-import com.github.alexdochioiu.core.di.CoreComponent
-import com.github.alexdochioiu.core.di.DaggerCoreComponent
 
 class NewsApplication : Application() {
 
@@ -23,14 +21,10 @@ class NewsApplication : Application() {
         AppCompatDelegate.setDefaultNightMode(nightMode)
     }
 
-    private val coreComponent: CoreComponent by lazy {
-        DaggerCoreComponent.create()
-    }
-
     private val appComponent: AppComponent by lazy {
         DaggerAppComponent
             .factory()
-            .create(coreComponent, this)
+            .create(this)
     }
 
     companion object {
