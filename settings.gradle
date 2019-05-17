@@ -1,2 +1,2 @@
-include ':app', ':core', ':core_networking', ':core_persistence', ':search', ':search_networking', ':search_persistence'
+include ':app', ':search', ':search_networking', ':search_persistence'
 rootProject.name='AndroidNewsV2'

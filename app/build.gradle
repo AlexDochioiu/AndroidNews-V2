@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply from: '../compile_options.gradle'
 apply from: '../dagger.gradle'
+apply from: '../dependencies_core.gradle'
 apply from: '../dependencies_ui.gradle'
 
 android {
@@ -26,13 +27,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    dynamicFeatures = [":core_networking", ":search", ":search_networking"]
+    dynamicFeatures = [":search", ":search_networking"]
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api project(":core")
+    api "com.squareup.okhttp3:okhttp:$okhttp"
+    api "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_interceptor"
+    api "com.squareup.retrofit2:retrofit:${retrofit.retrofit}"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'

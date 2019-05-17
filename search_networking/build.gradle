@@ -18,12 +18,10 @@ android {
         consumerProguardFiles 'consumer-rules.pro'
     }
 
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':app')
-    implementation project(':core_networking')
 }

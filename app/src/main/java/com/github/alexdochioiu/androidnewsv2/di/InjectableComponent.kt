@@ -1,4 +1,4 @@
-package com.github.alexdochioiu.core.di
+package com.github.alexdochioiu.androidnewsv2.di
 
 /**
  * Created by Alexandru Iustin Dochioiu on 21-Mar-19

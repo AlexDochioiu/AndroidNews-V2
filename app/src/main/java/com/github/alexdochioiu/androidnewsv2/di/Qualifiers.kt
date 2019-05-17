@@ -1,4 +1,4 @@
-package com.github.alexdochioiu.core.di
+package com.github.alexdochioiu.androidnewsv2.di
 
 import javax.inject.Qualifier
 
