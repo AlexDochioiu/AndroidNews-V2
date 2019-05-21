@@ -25,7 +25,7 @@ class NewsApplication : Application() {
     private val appComponent: AppComponent by lazy {
         DaggerAppComponent
             .factory()
-            .create(this)
+            .create(this@NewsApplication)
     }
 
     companion object {
