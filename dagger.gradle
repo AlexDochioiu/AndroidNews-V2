@@ -1,6 +1,6 @@
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    compileOnly "com.google.dagger:dagger:${dagger}"
+    implementation "com.google.dagger:dagger:${dagger}"
     kapt "com.google.dagger:dagger-compiler:${dagger}"
 }
